@@ -8,23 +8,37 @@
 
     <!-- TODO Step 1: Modify View attributes so views stay in place as arranged-->
 
+<!--    https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout-->
+<!--    https://developer.android.com/develop/ui/views/layout/constraint-layout-->
+<!--    https://developer.android.com/develop/ui/views/layout/constraint-layout#match-constraints-->
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="64dp" />
+        android:layout_marginHorizontal="32dp"
+
+        android:layout_marginTop="100dp"
+        android:minHeight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
         android:shadowColor="@color/teal_200"
         android:shadowDx="40"
         android:shadowDy="30"
         android:shadowRadius="30"
         android:text="Air Supply is the best band EVER!"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="277dp" />
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/spinner" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
